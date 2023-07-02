@@ -1,5 +1,12 @@
 {
+  "plugins": [
+    "plugin.added_module_as_plugin"
+  ],
   "characters": [
+    {
+      "name": "CenaMember",
+      "type": "CenaMember"
+    },
     {
       "name": "S.A",
       "type": "King"

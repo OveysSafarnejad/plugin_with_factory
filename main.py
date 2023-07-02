@@ -1,6 +1,7 @@
 import json
 
 from game import factory
+from game import loader
 from game.characters import King, Soldier
 
 
@@ -12,6 +13,9 @@ def runner() -> None:
     with open('game_conf.json') as configuration:
         conf = json.loads(configuration.read())
         characters_conf_data = conf.get('characters')
+        plugins_data = conf.get('plugins')
+
+        loader.load_plugins(plugins_data)
 
         characters = [factory.create(character) for character in
                       characters_conf_data]
